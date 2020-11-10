@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UserServiceService } from '../../services/user-service.service';
-
+import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: 'login.component.html'
+  selector: 'app-log-in',
+  templateUrl: './log-in.component.html',
+  styleUrls: ['./log-in.component.scss']
 })
-export class LoginComponent implements OnInit {
- 
+export class LogInComponent implements OnInit {
   public formGroup: FormGroup
   constructor(
     public readonly formBuilder: FormBuilder,
@@ -32,6 +31,23 @@ export class LoginComponent implements OnInit {
     var mail = this.formGroup.controls['email'].value;
     console.log('passs', psw);
     console.log('mail', mail);
+
+    // for (let i = 0; i < tab.length; i++) {
+    //   if (this.userService.getMail(mail) && this.userService.getPasswod(psw)) {
+    //     localStorage.setItem('connectedUser', JSON.stringify(tab[i]));
+    //     console.log('yes ath valid')
+    //       if(tab[i].food==='user'){
+    //         alert('user')
+    //       }
+    //       else{
+    //         alert('admin')
+    //       }
+    //   }
+    //   else {
+    //     console.log('errrrreur')
+    //   }
+    // }
+
 
 
 

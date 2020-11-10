@@ -48,6 +48,7 @@ import { ChartsModule } from 'ng2-charts';
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
+    AppModule.forRoot(),
     AppFooterModule,
     AppHeaderModule,
     AppSidebarModule,
@@ -70,4 +71,10 @@ import { ChartsModule } from 'ng2-charts';
   }],
   bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: AppModule,
+      providers: [ LocationStrategy ]
+    }}
+ }
